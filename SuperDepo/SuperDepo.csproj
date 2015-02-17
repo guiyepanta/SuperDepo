@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93461A8A-5E9D-4E6A-B517-668C7FC2CB2D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SuperDepo</RootNamespace>
+    <AssemblyName>SuperDepo</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SuperDepo.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="appStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="appStart.Designer.cs">
+      <DependentUpon>appStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesABM\contentSalidas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesABM\contentSalidas.Designer.cs">
+      <DependentUpon>contentSalidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesABM\contentEntradas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesABM\contentEntradas.Designer.cs">
+      <DependentUpon>contentEntradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesABM\ABMSalida.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesABM\ABMSalida.Designer.cs">
+      <DependentUpon>ABMSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesABM\contentInformes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesABM\contentInformes.Designer.cs">
+      <DependentUpon>contentInformes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesABM\desingEntrada.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesABM\desingEntrada.Designer.cs">
+      <DependentUpon>desingEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\Boton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\Etiqueta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\frmBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\frmBusqueda.Designer.cs">
+      <DependentUpon>frmBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\ImageManager.cs" />
+    <Compile Include="ControlesUsuario\inputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\inputBox.Designer.cs">
+      <DependentUpon>inputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\Numero.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\SelectDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\SelectDate.Designer.cs">
+      <DependentUpon>SelectDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesUsuario\SelectEntity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesUsuario\SelectEntity.Designer.cs">
+      <DependentUpon>SelectEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsRemitoDetallado.cs">
+      <DependentUpon>dsRemitoDetallado.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmTiposProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTiposProducto.Designer.cs">
+      <DependentUpon>frmTiposProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsSalidasConEntrada.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSalidasConEntrada.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsProductosDisponibles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProductosDisponibles.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsProductosEnUso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProductosEnUso.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsProductosFueraServicio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProductosFueraServicio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsProductosEnReparacion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProductosEnReparacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConciliacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConciliacion.Designer.cs">
+      <DependentUpon>frmConciliacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsSalidasVigentes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSalidasVigentes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\dsRemitoDetallado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRemitoDetallado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddReconciliacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddReconciliacion.Designer.cs">
+      <DependentUpon>frmAddReconciliacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTecnicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTecnicos.Designer.cs">
+      <DependentUpon>frmTecnicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLugaresEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLugaresEvento.Designer.cs">
+      <DependentUpon>frmLugaresEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientes.Designer.cs">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdiStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdiStart.Designer.cs">
+      <DependentUpon>mdiStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remito.Designer.cs">
+      <DependentUpon>Remito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\SuperDepoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuperDepoDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="appStart.resx">
+      <DependentUpon>appStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesABM\contentSalidas.resx">
+      <DependentUpon>contentSalidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesABM\contentEntradas.resx">
+      <DependentUpon>contentEntradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesABM\ABMSalida.resx">
+      <DependentUpon>ABMSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesABM\contentInformes.resx">
+      <DependentUpon>contentInformes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesABM\desingEntrada.resx">
+      <DependentUpon>desingEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\Boton.resx">
+      <DependentUpon>Boton.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\Etiqueta.resx">
+      <DependentUpon>Etiqueta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\frmBusqueda.resx">
+      <DependentUpon>frmBusqueda.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\inputBox.resx">
+      <DependentUpon>inputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\Numero.resx">
+      <DependentUpon>Numero.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\SelectDate.resx">
+      <DependentUpon>SelectDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesUsuario\SelectEntity.resx">
+      <DependentUpon>SelectEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTiposProducto.resx">
+      <DependentUpon>frmTiposProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConciliacion.resx">
+      <DependentUpon>frmConciliacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTecnicos.resx">
+      <DependentUpon>frmTecnicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLugaresEvento.resx">
+      <DependentUpon>frmLugaresEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdiStart.resx">
+      <DependentUpon>mdiStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Remito.resx">
+      <DependentUpon>Remito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptRemitoLegal.rdlc" />
+    <EmbeddedResource Include="Reportes\rptProductosDisponibles.rdlc" />
+    <EmbeddedResource Include="Reportes\rptProductosEnReparacion.rdlc" />
+    <EmbeddedResource Include="Reportes\rptProductosEnUso.rdlc" />
+    <EmbeddedResource Include="Reportes\rptProductosFueraServicio.rdlc" />
+    <EmbeddedResource Include="Reportes\rptSalidasConEntrada.rdlc" />
+    <EmbeddedResource Include="Reportes\rptRemitoDetallado.rdlc" />
+    <EmbeddedResource Include="Reportes\rptSalidasVigentes.rdlc" />
+    <None Include="App.config" />
+    <None Include="Datasets\dsSalidasVigentes.xsc">
+      <DependentUpon>dsSalidasVigentes.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsSalidasVigentes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSalidasVigentes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\dsSalidasVigentes.xss">
+      <DependentUpon>dsSalidasVigentes.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsRemitoDetallado.xsc">
+      <DependentUpon>dsRemitoDetallado.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsRemitoDetallado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRemitoDetallado.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\dsRemitoDetallado.xss">
+      <DependentUpon>dsRemitoDetallado.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsSalidasConEntrada.xsc">
+      <DependentUpon>dsSalidasConEntrada.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsSalidasConEntrada.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSalidasConEntrada.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\dsSalidasConEntrada.xss">
+      <DependentUpon>dsSalidasConEntrada.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsProductosDisponibles.xsc">
+      <DependentUpon>dsProductosDisponibles.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsProductosDisponibles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProductosDisponibles.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\dsProductosDisponibles.xss">
+      <DependentUpon>dsProductosDisponibles.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsProductosEnUso.xsc">
+      <DependentUpon>dsProductosEnUso.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsProductosEnUso.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProductosEnUso.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\dsProductosEnUso.xss">
+      <DependentUpon>dsProductosEnUso.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsProductosFueraServicio.xsc">
+      <DependentUpon>dsProductosFueraServicio.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsProductosFueraServicio.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProductosFueraServicio.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\dsProductosFueraServicio.xss">
+      <DependentUpon>dsProductosFueraServicio.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsProductosEnReparacion.xsc">
+      <DependentUpon>dsProductosEnReparacion.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\dsProductosEnReparacion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProductosEnReparacion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\dsProductosEnReparacion.xss">
+      <DependentUpon>dsProductosEnReparacion.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Datasets\SuperDepoDataSet.xsc">
+      <DependentUpon>SuperDepoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\SuperDepoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SuperDepoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datasets\SuperDepoDataSet.xss">
+      <DependentUpon>SuperDepoDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SuperDepo-BL\SuperDepo-BL.csproj">
+      <Project>{A88759DF-1CFC-4D76-B1A2-49787009BAC0}</Project>
+      <Name>SuperDepo-BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SuperDepo-CMM\SuperDepo-CMM.csproj">
+      <Project>{17471842-BA45-4916-BF4F-CC369735170B}</Project>
+      <Name>SuperDepo-CMM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SuperDepo-SL\SuperDepo-SL.csproj">
+      <Project>{9A0048DD-31C0-4E6B-B99C-F1D8ED7C7765}</Project>
+      <Name>SuperDepo-SL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlesUsuario\Imagenes\Clear.png" />
+    <Content Include="ControlesUsuario\Imagenes\Search.png" />
+    <None Include="Resources\btnOk.ico" />
+    <None Include="Resources\impresora.bmp" />
+    <None Include="Resources\Calendar.ico" />
+    <None Include="Resources\Group.ico" />
+    <None Include="Resources\User.ico" />
+    <None Include="Resources\Server.ico" />
+    <None Include="Resources\Add.bmp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
